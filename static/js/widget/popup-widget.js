@@ -1,4 +1,3 @@
-
 var popupWidget = (function(){
 	var $popup = $("#js-popup") , selfBin = {};
 
@@ -40,26 +39,28 @@ var popupWidget = (function(){
 	popup.prototype.alert = function(option){
 		option.buttonData = alertButton;
 		selfBin.setData(option);
-		this.context_type = "alert";
 		return this;
 	}
 	popup.prototype.sure = function(option){
 		option.buttonData = sureButton;
 		selfBin.setData(option);
-		this.context_type = "sure";
+		return this;
+	}
+	popup.prototype.toast = function(option){
+
 		return this;
 	}
 
 	popup.prototype.then = function(fun1 , fun2){
-		$popup.find(".bottom").one('click', ' #js-success', function() {
+		$popup.find(".bottom").one('click', ' #js-success', function(event) {
 			if(isset(fun1)) {
-				var type = fun1();
+				var type = fun1(event , this);
 				type == true || typeof type == "undefined" ? close() : ""
 			}
 		});
-		$popup.find(".bottom").one('click', ' #js-danger', function() {
+		$popup.find(".bottom").one('click', ' #js-danger', function(event) {
 			if(isset(fun2)) {
-				var type = fun2();
+				var type = fun2(event , this);
 				type == true || typeof type == "undefined" ? close() : ""
 			}else{
 				close()
@@ -83,5 +84,4 @@ var popupWidget = (function(){
 
 	return popup;	
 })();
-var popup = new popupWidget();
 	
