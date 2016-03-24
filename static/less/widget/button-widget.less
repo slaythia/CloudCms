@@ -7,10 +7,18 @@
 	width: 150px;
 	height:35px;
 	line-height: 0;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
 }
-.btn.hover:after{
-	content:"123";
+.btn:hover{
+	opacity: 0.9;
 }
+.btn.disable{
+	cursor: not-allowed;
+	opacity: 0.65;
+}
+
 .btn.default{
 	background-color: #5cb85c;
 	color:#fff
@@ -19,6 +27,8 @@
 	background-color: #d9534f;
 	color:#fff
 }
+
+
 .btn.in{
 	font-size:15px;
 	width: 48%;

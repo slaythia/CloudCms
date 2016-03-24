@@ -29,3 +29,7 @@ then(success (function) , error (function))
 
 
 
+### button-widget.js
+## 描述：			按钮组件
+## 依赖：			Jquery.js、base.js
+## 方法：			loading() 、reLoading();

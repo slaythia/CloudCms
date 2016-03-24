@@ -1,11 +1,12 @@
 var popupWidget = (function(){
+	Log.deBug('popup-widget' , "弹窗组件被创建")	
+
 	var $popup = $("#js-popup") , selfBin = {};
-
-
 	selfBin.init = function(){
 		if(typeof $popup[0] === "undefined"){
 			$(popupDemo).appendTo('body');
 			$popup = $("#js-popup");
+			Log.deBug('popup-widget' , "已加载窗口载体")	
 			$popup.on('click' , '.close' , function(){
 				close();
 			});
@@ -28,6 +29,7 @@ var popupWidget = (function(){
 	var popup = function(){
 		selfBin.init();
 	} , close = function(){
+		Log.deBug('popup-widget' , "Close popup window");	
 		$popup.find(".popup-box").css({top : "-20%" , opacity : 0})
 		setTimeout(function(){
 			$popup.fadeOut(200);
@@ -71,6 +73,7 @@ var popupWidget = (function(){
 
 
 	popup.prototype.show = function(option){
+		Log.deBug('popup-widget' , "Show window popup");	
 		$popup.fadeIn(200 , function(){
 			$popup.find(".popup-box").css({top : "20%" , opacity : 1})
 		});
