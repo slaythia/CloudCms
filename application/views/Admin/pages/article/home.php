@@ -23,7 +23,7 @@
 					<th width="90px"></th>
 				</tr>
 				{article_list}
-				<tr>
+				<tr data-id='{id}'>
 					<td><input type="checkbox"></td>
 					<td>{title}</td>
 					<td><a href="">{article_byid}.html</a></td>
@@ -35,11 +35,10 @@
 				</tr>
 				{/article_list}
 			</table>
-			<?php
-				$this->load->view($admin_template_name . '/widget/page');
-			?>
+
 		</div>
 	</div>
+	
 
 	<?php $this->load->view( $admin_template_name . '/template/footer')?>
 </body>

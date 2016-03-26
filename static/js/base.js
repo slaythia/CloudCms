@@ -1,8 +1,24 @@
 function isset(context){
 	return typeof context !== undefined;
 }
+(function(){
+	$('.fa-edit').on('click' , function(event) {
+		var id = $(this).parent().parent().data('id');
+		window.location.href = "." + base_url + '/edit/?id=' + id;
+	});
 
-// $(".warpper-content").hide().fadeIn(200)
+	$('.fa-trash-o').on('click' , function(event) {
+		var popup = new popupWidget();
+		popup.sure({
+			title : '您确定要删除吗',
+			content : '<p>您确定要删除这篇文章吗？</p><p>删除后的文章将无法恢复</p>',
+		}).show().then(function(){
+
+		} , function(){
+			
+		});
+	});
+})()
 
 
 var Rule = (function(){

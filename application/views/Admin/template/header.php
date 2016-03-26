@@ -7,3 +7,6 @@
 		<link rel="shortcut icon" href="./favicon.ico" />
 		<link rel="stylesheet" href="./static/bin/font-awesome/font-awesome.min.css">
 		<link rel="stylesheet" href="./static/css/base.css">
+		<script type="text/javascript">
+			var base_url = "<?=$_SERVER['PATH_INFO']?>";
+		</script>
