@@ -1,8 +1,8 @@
-## popup-wdiget.js
-## 描述：			整站的弹窗组件，他可以实现网站提示的浮动弹窗
-## 依赖：			Jquery.js、dome/demo-config.js
-## 方法：			sure()、alert()、toast()、show()、close()、then();
-## 通用必须属性：	option.title、option.content
+# popup-wdiget.js
+### 描述：			整站的弹窗组件，他可以实现网站提示的浮动弹窗
+### 依赖：			Jquery.js、dome/demo-config.js
+### 方法：			sure()、alert()、toast()、show()、close()、then();
+### 通用必须属性：	option.title、option.content
 
 
 sure：设置当前窗口为sure窗口，拥有确认和取消按钮
@@ -29,7 +29,7 @@ then(success (function) , error (function))
 
 
 
-### button-widget.js
-## 描述：			按钮组件
-## 依赖：			Jquery.js、base.js
-## 方法：			loading() 、reLoading();
+# button-widget.js
+### 描述：			按钮组件
+### 依赖：			Jquery.js、base.js
+### 方法：			loading() 、reLoading();
