@@ -1,0 +1,55 @@
+/**
+ * 后台管理系统左侧导航栏
+ */
+.left-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 160px;
+  height: 100%;
+  background-color: #2b303e;
+  color: #f2f2f2;
+}
+.left-bar .active,
+.left-bar .left-bar-item:hover {
+  background-color: #222632;
+}
+.left-bar .active span,
+.left-bar .active i {
+  color: #eee !important;
+}
+.left-bar .left-bar-item:hover span,
+.left-bar .left-bar-item:hover i {
+  color: #eee;
+}
+.left-bar .left-bar-item {
+  text-align: left;
+  padding: 17px 0 17px 9px;
+  position: relative;
+  border-bottom: 1px solid #333;
+}
+.left-bar .left-bar-item .list {
+  font-size: 12px;
+  padding: 3px 0;
+}
+.left-bar .left-bar-item i {
+  position: absolute;
+  top: 19px;
+  margin-left: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+.left-bar .left-bar-item span {
+  color: #aaa;
+  font-size: 12px;
+  margin-left: 50px;
+}
+.left-bar .left-bar-item.left-bar-header {
+  padding: 0;
+  margin-bottom: 3px;
+  height: 55px;
+  line-height: 70px;
+  text-align: center;
+  background-color: #222632;
+  border: none;
+}

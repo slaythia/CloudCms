@@ -6,7 +6,7 @@ class Loader{
 		$config = $CI->config->item('template');
 		$view_type = $view_type == 1 ? $config['admin_template_name']  : ['home_template_name'];
 		foreach ($view_path as $path) {
-			$CI->parser->parse($view_type . '/' . $path , $push_data);
+			$CI->parser->parse($view_type . '/' . $path , array_merge($config , $push_data));
 		}
 	}
 }

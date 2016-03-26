@@ -8,4 +8,4 @@ var popupDemo = [
 ].join("");
 var alertButton = '<div class="botton-content"><button class="btn default large" id="js-success">确认</button></div>';
 var sureButton = '<div class="botton-content"><button class="btn default in" id="js-success">确认</button><button class="btn danger in" id="js-danger">取消</button></div>';
-
+var toastDemo = '<div class="toast" id="js-toast"><p></p></div>';

@@ -1,0 +1,108 @@
+.top-bar {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 9px 0;
+  height: 35px;
+  padding-bottom: 11px;
+}
+.top-bar .top-bar-left {
+  float: left;
+  margin-left: 10px;
+  line-height: 35px;
+}
+.top-bar .top-bar-left .search {
+  position: relative;
+  top: 5px;
+}
+.top-bar .top-bar-left .search .fa-search {
+  color: #aaa;
+  margin: 0 10px;
+  font-size: 14px;
+}
+.top-bar .top-bar-left .search > input {
+  color: #aaa;
+  height: 20px;
+  border: none;
+  font-size: 14px;
+  width: 200px;
+}
+.top-bar .top-bar-left .search > input:hover {
+  border-bottom: 1px solid #eee;
+}
+.top-bar .top-bar-right {
+  float: right;
+}
+.top-bar .top-bar-right .tools {
+  float: left;
+  line-height: 35px;
+}
+.top-bar .top-bar-right .tools i {
+  margin-right: 20px;
+  color: #949ea9;
+  font-size: 15px;
+}
+.top-bar .top-bar-right .user-data {
+  float: left;
+  border-left: 1px solid #eee;
+  padding: 0 20px;
+}
+.top-bar .top-bar-right .user-data > img {
+  border-radius: 100%;
+  width: 35px;
+  float: left;
+}
+.top-bar .top-bar-right .user-data .user-data-right {
+  float: left;
+  margin-left: 15px;
+  position: relative;
+}
+.top-bar .top-bar-right .user-data .user-data-right h2 {
+  font-size: 12px;
+  color: #888;
+  font-weight: 400;
+  line-height: 35px;
+}
+.top-bar .top-bar-right .user-data .user-data-right .data-list {
+  display: none;
+  position: absolute;
+  top: 66px;
+  width: 310px;
+  border: 1px solid #eaeaea;
+  height: 240px;
+  border-radius: 6px;
+  right: 0px;
+  background-color: #fff;
+  box-shadow: 0 0 40px 0px #eee;
+}
+.top-bar .top-bar-right .user-data .user-data-right .data-list .data-header {
+  width: 100%;
+  font-size: 14px;
+  color: #aaa;
+  padding: 10px;
+  border-radius: 5px 5px 0;
+  background-color: #fafafa;
+}
+.top-bar .top-bar-right .user-data .user-data-right .data-list .data-content {
+  padding: 20px;
+}
+.top-bar .top-bar-right .user-data .user-data-right .data-list .data-content li {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #aaa;
+}
+.top-bar .top-bar-right .user-data .user-data-right .data-list:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 69px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fafafa;
+}
+.top-bar .top-bar-right .user-data:hover .data-list {
+  display: block;
+}

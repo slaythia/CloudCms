@@ -1,11 +1,20 @@
+/* 垂直水平居中 */
 .absolute-center(){
 	position:absolute;
 	top:0;left:0;bottom:0;right:0;
 	margin:auto;
 }
 
+/* 水平居中 */
 .absolute-line-center(){
 	position:absolute;
 	right:0;left:0;
 	margin:0 auto;
+}
+
+.transition(@name , @time , @type){
+	-webkit-transition:@name @time  @type;
+	-moz-transition:@name @time  @type;
+	-s-transition:@name @time  @type;
+	transition:@name @time  @type;
 }

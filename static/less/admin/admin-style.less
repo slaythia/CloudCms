@@ -1,0 +1,87 @@
+body{
+	background-color: #f0f3f6;
+}
+.warpper{
+	margin-left: 160px;
+	.warpper-content{
+		margin-left: 0;
+		padding:30px 20px;
+	}
+
+
+	.list-view-table{
+		background-color: #fff;
+		width:100%;
+		td{
+			font-size: 14px;
+			font-weight: 400;
+			padding:20px 14px;
+			color:#888;
+		}
+		tr:hover{
+			background-color: #fafafa;
+			transition:background 0.3s;
+		}
+		a{
+			text-decoration: none;
+			color:#348ec7;
+		}
+		i{
+			margin-left: 15px;
+		}
+		.tag{
+			background-color: #f2f2f2;
+			color:#888;
+			padding:2px 5px;
+			border-radius: 4px;
+			margin-bottom: 4px;
+			float: left;
+			margin-right: 4px;
+			font-size: 12px;
+		}
+	}
+
+	// 分页样式
+	.page{
+		margin-top: 30px;
+		li:hover , .active{
+			background-color: #111
+		}
+		li{
+			float: left;
+			background-color: #2b303e;
+			padding:6px 0px;
+			a{
+				padding:6px 15px;
+				color:#eee;
+				text-decoration: none
+			}
+		}
+	}
+
+
+	// 定位样式
+	.position{
+		width:100%;
+		margin-top:20px;
+		font-size: 14px;
+		color:#aaa;
+		i{
+			margin-right: 5px;
+		}
+		span{
+			position: relative;
+			left:20px;
+			margin-left:10px;
+		}
+		span:after{
+			content:">";
+			margin-left: 10px;
+		}
+	}
+}
+
+
+@import "admin-left-bar.less";
+@import "admin-top-bar.less";
+@import "admin-base.less";

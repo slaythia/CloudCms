@@ -1,12 +1,21 @@
 var popupWidget = (function(){
 	Log.deBug('popup-widget' , "弹窗组件被创建")	
 
-	var $popup = $("#js-popup") , selfBin = {};
-	selfBin.init = function(){
+	var $popup = $("#js-popup") , selfBin = {} , $toast = $("#js-toast");
+	selfBin.toast_init = function(){
+		if(typeof $toast[0] === "undefined"){
+			$(toastDemo).appendTo('body');
+			$toast = $("#js-toast");
+			Log.deBug('popup-widget' , "toast 已加载窗口载体")	
+			$toast.on('click' , '.close' , function(){
+				close();
+			});
+		}
+	} , selfBin.init = function(){
 		if(typeof $popup[0] === "undefined"){
 			$(popupDemo).appendTo('body');
 			$popup = $("#js-popup");
-			Log.deBug('popup-widget' , "已加载窗口载体")	
+			Log.deBug('popup-widget' , "toast 已加载窗口载体")	
 			$popup.on('click' , '.close' , function(){
 				close();
 			});
@@ -39,17 +48,25 @@ var popupWidget = (function(){
 
 	// 只有单独提示框并只有确认按钮的提示窗口
 	popup.prototype.alert = function(option){
+		Log.deBug('popup-widget' , "alert create")	
 		option.buttonData = alertButton;
 		selfBin.setData(option);
 		return this;
 	}
 	popup.prototype.sure = function(option){
+		Log.deBug('popup-widget' , "sure create")	
 		option.buttonData = sureButton;
 		selfBin.setData(option);
 		return this;
 	}
-	popup.prototype.toast = function(option){
-
+	popup.prototype.toast = function(content){
+		Log.deBug('popup-widget' , "toast create");
+		selfBin.toast_init();
+		$toast.find('p').text(content);
+		$toast.show().css({top : "10%"});
+		setTimeout(function(){
+			$toast.css({top : "-10%"});
+		} , 3000)
 		return this;
 	}
 
@@ -58,6 +75,8 @@ var popupWidget = (function(){
 			if(isset(fun1)) {
 				var type = fun1(event , this);
 				type == true || typeof type == "undefined" ? close() : ""
+			}else{
+				close();
 			}
 		});
 		$popup.find(".bottom").one('click', ' #js-danger', function(event) {

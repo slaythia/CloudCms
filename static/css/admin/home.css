@@ -1,0 +1,68 @@
+.circle {
+  width: 300px;
+  height: 300px;
+}
+.circle .speed {
+  width: 260px;
+  height: 260px;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 20px;
+  border-radius: 50%;
+  transition: all 4s ease;
+  position: relative;
+}
+.circle .speed-right {
+  border-right-color: #3aa8ed;
+  border-bottom-color: #3aa8ed;
+  left: -100%;
+  -webkit-transform: rotate(-226deg);
+  animation: circle_right 0.3s linear ;
+  margin-left: -1px;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.circle .speed-left {
+  border-left-color: #3aa8ed;
+  border-bottom-color: #3aa8ed;
+  left: 0%;
+  -webkit-transform: rotate(-136deg);
+  animation: circle_left 0.3s linear 0.3s infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+.circle .circle-left,
+.circle .circle-right {
+  float: left;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+@keyframes circle_right {
+  0% {
+    -webkit-transform: rotate(-225deg);
+  }
+  50% {
+    border-right-color: #2877a8;
+    border-bottom-color: #2877a8;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg);
+  }
+}
+@keyframes circle_left {
+  0% {
+    -webkit-transform: rotate(-135deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+/* <div class="circle">
+	<div class="circle-left">
+		<div class="speed speed-left"></div>
+	</div>
+	<div class="circle-right">
+		<div class="speed speed-right"></div>
+	</div>
+</div> */
